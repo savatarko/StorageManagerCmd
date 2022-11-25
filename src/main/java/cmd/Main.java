@@ -19,7 +19,6 @@ public class Main {
             if (input.equalsIgnoreCase("gdrive")) {
                 Class.forName("code.GDrive");
             }
-            //ovde fali cofijev deo
             else if(input.equalsIgnoreCase("local")){
                 Class.forName("LocalDrive");
             }
@@ -79,8 +78,9 @@ public class Main {
                    else sm.CreateDirectory(split[0], split[1], Integer.parseInt(split[2]));
                    break;
                case 2:
-                   //bash
-                   int todo = 1;
+                   input = scanner.nextLine();
+                   split = input.split(" ");
+                   sm.CreateDirectoryBash(split[0], split[1]);
                    break;
                case 3:
                    input = scanner.nextLine();
